@@ -19,15 +19,5 @@ public class AnimalMove : MonoBehaviour
         transform.Translate(Vector3.back * speedAnimal * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Food"))
-        {
-            Destroy(collision.gameObject);
-
-            Destroy(gameObject);
-
-            Debug.Log("Destroyed");
-        }
-    }
+    
 }
