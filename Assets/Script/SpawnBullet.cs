@@ -7,13 +7,14 @@ public class SpawnBullet : MonoBehaviour
     public GameObject spawnBullet;
     public Transform spawnPoint;
     public float lifeTime = 3f;
-    
+    public AudioClip impact;
+    /*AudioSource audioSource;*/
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*audioSource = GetComponent<AudioSource>(); */ 
     }
 
     // Update is called once per frame
@@ -21,6 +22,8 @@ public class SpawnBullet : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
+
+            /*audioSource.PlayOneShot(impact);*/
             Spawn();    
         }
 
