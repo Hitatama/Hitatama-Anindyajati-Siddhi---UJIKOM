@@ -60,4 +60,21 @@ public class SpawnAnimal : MonoBehaviour
     {
         nextSpawn = Time.time + Random.Range(minspawn, maxSpawn);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            Destroy(collision.gameObject);
+
+            Destroy(gameObject);
+
+            Debug.Log("Destroyed");
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        return;
+    }
 }
